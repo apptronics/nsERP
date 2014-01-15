@@ -1,5 +1,5 @@
 <?php if (!defined('BASEPATH')) die();
-class Frontpage extends Main_Controller {
+class Frontpage extends MY_Controller {
 
    public function index()
 	{
@@ -10,6 +10,7 @@ class Frontpage extends Main_Controller {
 	
 	public function say()
 	{
+
 		$this->load->spark('example-spark/1.0.0');      # We always specify the full path from the spark folder
 		$this->example_spark->printHello();             # echo's "Hello from the example spark!"
 	}   
