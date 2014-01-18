@@ -6,7 +6,6 @@
    <meta name="description" content="">
    <meta name="keywords" content="">
    <meta name="author" content="">
-
    <title>sn-crm</title>
    <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/bootstrap/css/font-awesome.css') ?>" rel="stylesheet">
