@@ -1,9 +1,11 @@
-<?php if (!defined('BASEPATH')) die();
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class Auth extends MY_Controller 
 {
 	function __construct()
 	{
 	  parent::__construct();
+	  $this->load->config('nscrm');
 	}
 
 	public function index()
@@ -13,8 +15,18 @@ class Auth extends MY_Controller
 
 	public function login()
 	{
-		$this->load->view('include/header');
+		$this->_header();
 		$this->load->view('login_view');
+		$this->_footer();
+	}
+
+	function _header()
+	{
+		$this->load->view('include/header');
+	}
+
+	function _footer()
+	{
 		$this->load->view('include/footer');
 	}
 }

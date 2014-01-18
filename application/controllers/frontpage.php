@@ -1,4 +1,5 @@
-<?php if (!defined('BASEPATH')) die();
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class Frontpage extends MY_Controller {
 
    public function index()
