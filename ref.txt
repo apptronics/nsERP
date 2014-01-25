@@ -1,0 +1,10 @@
+- Authentication & Authorization
+https://github.com/emreakay/CodeIgniter-Aauth
+https://github.com/EllisLab/CodeIgniter/wiki/Aauth-User-Authorization-and-Authentication-Library
+http://stackoverflow.com/questions/1252079/what-is-the-best-authentication-and-authorization-library-for-codeigniter
+https://github.com/EllisLab/CodeIgniter/wiki/Aauth-User-Authorization-and-Authentication-Library
+https://github.com/benedmunds/CodeIgniter-Ion-Auth/tree/2/sql
+http://stackoverflow.com/questions/346980/how-should-i-choose-an-authentication-library-for-codeigniter
+
+- HELP
+https://github.com/EllisLab/CodeIgniter/wiki/_pages

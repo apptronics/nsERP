@@ -6,12 +6,6 @@ body {
    padding-top: 15px;
 }
 
-.something-semantic {
-   display: table;
-   width: 100%;
-}
-.something-else-semantic {
-   display: table-cell;
-   text-align: center;
-   vertical-align: middle;
+.xdebug-var-dump {
+	background-color: #f7f7f9
 }

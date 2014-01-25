@@ -5,7 +5,6 @@ class Auth extends MY_Controller
 	function __construct()
 	{
 	  parent::__construct();
-	  $this->load->config('nscrm');
 	}
 
 	public function index()
@@ -20,15 +19,26 @@ class Auth extends MY_Controller
 		$this->_footer();
 	}
 
-	function _header()
+	//로그인 인증 처리
+	public function authentication()
 	{
-		$this->load->view('include/header');
+		$this->_header();
+
+		$authentication = $this->config->item('authentication');		
+		if(	$this->input->post('userid') == $authentication['userid'] &&
+			$this->input->post('password') == $authentication['password']) 
+		{
+			$this->session->set_userdata('is_login', true);
+			redirect("schedule/index");
+
+		} else {
+			echo "불일치";
+			redirect('auth/login');
+		}
+
+		$this->_footer();
 	}
 
-	function _footer()
-	{
-		$this->load->view('include/footer');
-	}
 }
 
 /* End of file Auth.php */

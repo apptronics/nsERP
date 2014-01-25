@@ -8,12 +8,11 @@
 	      <h1>로그인 하세요.</h1>
 	    </div>
 
-		<form class="form-horizontal" role="form">
-		  
+		<form class="form-horizontal" role="form" action="<?php echo base_url('/index.php/auth/authentication') ?>" method="post">
 		  <div class="form-group">
 		    <label for="inputID" class="col-sm-2 control-label">아이디</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control" id="inputID" placeholder="ID" name="id" />
+		      <input type="text" class="form-control" id="inputID" placeholder="ID" name="userid" />
 		    </div>
 		  </div>
 		  
@@ -32,9 +31,5 @@
 		
 		</form>
 	</section>
-    
-
-
-    
 </div>
 

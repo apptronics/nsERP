@@ -390,5 +390,18 @@ function __autoload($class)
  	}
 }
 
+
+/*
+| -------------------------------------------------------------------
+|  Test
+| -------------------------------------------------------------------
+|
+*/
+$config['authentication'] = array(
+		'userid'=>'egoing',
+		'password'=>'111111'
+);
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
