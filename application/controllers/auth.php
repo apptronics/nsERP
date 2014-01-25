@@ -29,7 +29,7 @@ class Auth extends MY_Controller
 			$this->input->post('password') == $authentication['password']) 
 		{
 			$this->session->set_userdata('is_login', true);
-			redirect("schedule/index");
+			redirect("schedule/view_schedule");
 
 		} else {
 			echo "불일치";

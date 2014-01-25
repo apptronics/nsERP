@@ -15,6 +15,9 @@ class Schedule extends MY_Controller
 	public function view_schedule()
 	{
 		$this->_header();
+
+		var_dump($this->session->all_userdata());
+
 		if($this->session->userdata('is_login'))
 		{
 			echo "로그인 완료";
