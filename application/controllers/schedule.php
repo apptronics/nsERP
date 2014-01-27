@@ -9,16 +9,16 @@ class Schedule extends MY_Controller
 
 	public function index()
 	{
-		$this->view_schedule();
+		$this->view();
 	}
 
-	public function view_schedule()
+	public function view()
 	{
 		$this->_header();
 
 		var_dump($this->session->all_userdata());
 
-		if($this->session->userdata('is_login'))
+		if($this->session->userdata('logged_in'))
 		{
 			echo "로그인 완료";
 		} else {

@@ -14,9 +14,18 @@ class Auth extends MY_Controller
 
 	public function login()
 	{
+
 		$this->_header();
 		$this->load->view('login_view');
 		$this->_footer();
+
+	}
+
+	public function logout()
+	{
+		$this->session->userdata = array();
+        $this->session->sess_destroy();
+		redirect('/auth/login', 'refresh');
 	}
 
 	//로그인 인증 처리
@@ -28,17 +37,15 @@ class Auth extends MY_Controller
 		if(	$this->input->post('userid') == $authentication['userid'] &&
 			$this->input->post('password') == $authentication['password']) 
 		{
-			$this->session->set_userdata('is_login', true);
-			redirect("schedule/view_schedule");
+			$this->session->set_userdata('logged_in', true);
+			redirect("/schedule/view", 'refresh');
 
 		} else {
-			echo "불일치";
+			$this->session->set_flashdata('message', "로그인에 실패했습니다");
 			redirect('auth/login');
 		}
-
 		$this->_footer();
 	}
-
 }
 
 /* End of file Auth.php */

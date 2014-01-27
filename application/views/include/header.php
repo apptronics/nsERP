@@ -13,3 +13,29 @@
    <link href="<?php echo base_url('assets/css/custom.css') ?>" rel="stylesheet">
 </head>
 <body>
+
+<?php 
+   if($this->session->userdata('logged_in'))
+   {
+?>
+      <a href="<?php echo base_url('/index.php/auth/logout') ?>">로그아웃</a>
+<?php 
+   }
+?>
+
+
+
+<!-- 유저알림 메세지 표시    -->
+<?php 
+   $message =  $this->session->flashdata('message');
+   if($message)
+   {
+?>
+<div class="highlight">
+   <?php echo $message; ?>
+</div>
+<?php
+
+   }
+?>
+
