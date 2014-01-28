@@ -14,6 +14,7 @@
 </head>
 <body>
 
+<!-- 헤더메뉴 -->
 <?php 
    if($this->session->userdata('logged_in'))
    {
@@ -22,8 +23,6 @@
 <?php 
    }
 ?>
-
-
 
 <!-- 유저알림 메세지 표시    -->
 <?php 
@@ -35,7 +34,9 @@
    <?php echo $message; ?>
 </div>
 <?php
-
    }
 ?>
 
+
+<!-- 콘텐츠영역 -->
+<div id="page-container" class="row">

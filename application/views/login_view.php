@@ -8,7 +8,7 @@
 	      <h1>로그인 하세요.</h1>
 	    </div>
 
-		<form class="form-horizontal" role="form" action="<?php echo base_url('/index.php/auth/authentication') ?>" method="post">
+		<form class="form-horizontal" role="form" action="<?php echo base_url('/index.php/auth/authentication'); ?>" method="post">
 		  <div class="form-group">
 		    <label for="inputID" class="col-sm-2 control-label">아이디</label>
 		    <div class="col-sm-10">
