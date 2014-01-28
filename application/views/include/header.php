@@ -15,14 +15,36 @@
 <body>
 
 <!-- 헤더메뉴 -->
-<?php 
-   if($this->session->userdata('logged_in'))
-   {
-?>
-      <a href="<?php echo base_url('/index.php/auth/logout') ?>">로그아웃</a>
-<?php 
-   }
-?>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <!-- Brand and toggle get grouped for better mobile display -->
+   <div class="navbar-header">
+      <a class="navbar-brand" href="#">앱트로닉스</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+      
+   </div>
+
+   <!-- Collect the nav links, forms, and other content for toggling -->
+   <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul id="menu-1" class="nav navbar-nav navbar-right">
+         <!-- 로그아웃 -->
+         <?php 
+            if($this->session->userdata('logged_in'))
+            {
+         ?>
+               <li><a href="<?php echo base_url('/index.php/auth/logout') ?>" >로그아웃</a></li>
+         <?php 
+            }
+         ?>
+      </ul> <!-- menu-1 -->
+   </div> <!-- /.navbar-collapse -->
+</nav>
+
+
+
 
 <!-- 유저알림 메세지 표시    -->
 <?php 
