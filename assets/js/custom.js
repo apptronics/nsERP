@@ -1,87 +1,58 @@
-/**
- * Light Javascript "class" frameworking for you
- * to organize your code a little bit better.
- *
- * If you want more complex things, I'd suggest
- * importing something like Backbone.js as it
- * has much better abilities to handle a MVC
- * like framework including persistant stores (+1)
- *
- * @author  sjlu (Steven Lu)
- */
-var Frontpage = function()
-{
-	/**
-	 * The exports variable is responsible for
-	 * storing and returning public functions
-	 * in the instantized class.
-	 */
-	var exports = {};
-
-	/**
-	 * Write your public functions like this.
-	 * Make sure you include it into the exports
-	 * variable.
-	 */
-	function public_function() 
-	{
-		/**
-		 * Note that we can still call
-		 * private functions within the scope
-		 * of the "class".
-		 */
-		private_function();
-	}
-	exports.public_function = public_function;
-
-	/**
-	 * Private functions are very similar, they
-	 * just are not included in the exports 
-	 * function.
-	 */
-	 function private_function()
-	 {
-
-	 }
-
-	 /**
-	  * You may wanna have a init() function
-	  * to do all your bindings for the class.
-	  */
-	 function init()
-	 {
-
-	 }
-	 exports.init = init;
-
-	 /**
-	  * Last but not least, we have to return
-	  * the exports object.
-	  */
-	 return exports;
-}
-
-/**
- * To initialize our Frontpage class, we need
- * to define it into a Javascript variable like
- * so.
- */
-var frontpage = new Frontpage();
-
-/**
- * We can then call the functions as like any
- * other object, just the ones included in the 
- * exports object that was returned from Frontpage()
- */
-frontpage.public_function();
-
-/**
- * Write all your event listeners in the 
- * document.ready function or else they
- * may not bind correctly. As a side note, I like
- * to just call a public function in a class
- * to handle all your bindings here.
- */
 $(document).ready(function() {
-	frontpage.init();
-});
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			editable: true,
+			events: [
+				{
+					title: 'All Day Event',
+					start: new Date(y, m, 1)
+				},
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-2)
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d-3, 16, 0),
+					allDay: false
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+4, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Click for Google',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 29),
+					url: 'http://google.com/'
+				}
+			]
+		});
+		
+	});

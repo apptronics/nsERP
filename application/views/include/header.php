@@ -9,10 +9,22 @@
    <title>sn-crm</title>
    <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/bootstrap/css/font-awesome.css') ?>" rel="stylesheet">
+<?php
+   $CI =& get_instance();
+   if ($this->uri->segment(1) === "schedule")
+   {
+?>
+   <link href="<?php echo base_url('assets/fullcalendar/fullcalendar.css') ?>" rel="stylesheet" />
+   <link href="<?php echo base_url('assets/fullcalendar/fullcalendar.print.css') ?>" rel="stylesheet" media="print" />
+<?php
+}
+?>
    <link href="<?php echo base_url('assets/bootstrap/css/docs.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/custom.css') ?>" rel="stylesheet">
 </head>
 <body>
+
+
 
 <!-- 헤더메뉴 -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

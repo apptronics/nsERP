@@ -12,27 +12,13 @@ class Schedule extends MY_Controller
 		$this->view();
 	}
 
+	// http://arshaw.com/fullcalendar/
 	public function view()
 	{
 		$this->_header();
-
-		var_dump($this->session->all_userdata());
-
-		if($this->session->userdata('logged_in'))
-		{
-			echo "로그인 완료";
-		} else {
-			echo "로그인 안함";
-		}
-
-
-
+		$this->load->view('schedule_view');
 		$this->_footer();
 	}
-
-
-
-	
 }
 
 /* End of file Auth.php */
